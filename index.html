@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Juliet Lee-Franzini: Charting the Subatomic Frontier</title>
+  <!-- Link to Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Add Google Fonts links here if desired -->
+  <style>
+    /* Small custom styles if needed - e.g., for timeline line */
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: #4b5563; /* gray-600 */
+    }
+    @media (max-width: 768px) {
+      .timeline-line::before {
+        left: 20px; /* Adjust for mobile */
+        transform: translateX(0);
+      }
+      .timeline-item {
+        padding-left: 50px; /* Adjust for mobile */
+        width: 100%;
+        text-align: left;
+      }
+      .timeline-item.md\:text-right {
+        text-align: left !important; /* Override */
+      }
+      .timeline-item .md\:ml-auto {
+        margin-left: 0 !important; /* Override */
+      }
+      .timeline-dot {
+        left: 20px; /* Adjust for mobile */
+      }
+    }
+    /* Style for section headers */
+    .section-heading {
+      @apply text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight;
+    }
+    .card-hover {
+      @apply hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-95 shadow-md">
+  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <a href="#hero" class="text-xl font-bold text-white hover:text-teal-300 transition-colors">JLF</a>
+    <div class="hidden md:flex space-x-6">
+      <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+      <a href="#timeline" class="text-gray-300 hover:text-white transition-colors">Timeline</a>
+      <a href="#science" class="text-gray-300 hover:text-white transition-colors">Science</a>
+      <a href="#stonybrook" class="text-gray-300 hover:text-white transition-colors">Stony Brook</a>
+      <a href="#legacy" class="text-gray-300 hover:text-white transition-colors">Legacy</a>
+      <a href="#bibliography" class="text-gray-300 hover:text-white transition-colors">Bibliography</a>
+    </div>
+    <!-- Mobile Menu Button Placeholder (requires JS) -->
+    <div class="md:hidden">
+      <button class="text-gray-300 hover:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 text-white relative overflow-hidden">
+  <!-- Optional: Add a subtle background pattern or image placeholder here -->
+  <div class="absolute inset-0 bg-black opacity-30 z-0">
+    <!-- Placeholder for full background image -->
+    <!-- <img src="placeholder-hero-bg.jpg" class="object-cover w-full h-full" alt=""> -->
+  </div>
+  <div class="text-center z-10 p-8">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight tracking-tighter" style="font-family: 'Playfair Display', serif;">
+      Juliet Lee-Franzini
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+      A Force in Physics: Unveiling the building blocks of the universe, one experiment at a time.
+    </p>
+    <a href="#about" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg">
+      Discover Her Story
+    </a>
+  </div>
+  <!-- Optional Scroll Indicator -->
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+    <svg class="w-6 h-6 text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+  </div>
+</section>
+
+<!-- Introduction / About Section -->
+<section id="about" class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+      <div class="w-full md:w-1/3 flex-shrink-0">
+        <!-- Image Placeholder -->
+        <div class="bg-gray-300 w-full aspect-square rounded-lg shadow-lg flex items-center justify-center text-gray-500">
+           <img src="images/lab.jpg" alt="Dr. Juliet Lee-Franzini" class="rounded-lg shadow-lg object-cover w-full h-full">
+        </div>
+      </div>
+      <div class="w-full md:w-2/3">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">The Pioneer's Path</h2>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+          Dr. Juliet Lee-Franzini (October 25, 1933 – January 20, 2014) was a distinguished Chinese-American experimental particle physicist. A trailblazer for women in STEM, she dedicated her career to unraveling the fundamental forces and particles governing our universe through meticulous experimentation and leadership in major international collaborations.
+        </p>
+        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+          Born in Peking and educated in the US, she earned her Ph.D. from Columbia University under Nobel laureate Leon Lederman, setting the stage for decades of groundbreaking research.
+        </p>
+        <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+          <h3 class="text-xl font-semibold text-teal-800 mb-3">Key Facts</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li><strong class="font-medium">Born:</strong> October 25, 1933 (Peking, China)</li>
+            <li><strong class="font-medium">Died:</strong> January 20, 2014 (Frascati, Italy)</li>
+            <li><strong class="font-medium">PhD:</strong> Physics, Columbia University (1960)</li>
+            <li><strong class="font-medium">Field:</strong> Experimental Particle Physics</li>
+            <li><strong class="font-medium">Key Affiliations:</strong> Stony Brook University, Cornell, Fermilab, Frascati (INFN)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section id="timeline" class="py-16 md:py-24 bg-gray-200">
+  <div class="container mx-auto px-6">
+    <h2 class="section-heading text-gray-800">A Journey Through Physics</h2>
+    <div class="relative timeline-line max-w-3xl mx-auto">
+      <!-- Timeline Item 1 -->
+      <div class="mb-12 md:mb-8 flex md:justify-normal md:w-1/2 timeline-item">
+        <div class="timeline-dot absolute w-4 h-4 bg-teal-500 rounded-full mt-1.5 -translate-x-1/2 left-1/2 md:left-1/2 border-4 border-gray-200"></div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:max-w-md card-hover">
+          <h3 class="text-lg font-semibold mb-1 text-teal-700">1933 & 1960</h3>
+          <p class="text-gray-600">Born in Peking, China. Earns Ph.D. in Physics from Columbia University under Leon Lederman, researching muon decay.</p>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="mb-12 md:mb-8 flex md:justify-end md:w-1/2 md:ml-auto timeline-item md:text-right">
+        <div class="timeline-dot absolute w-4 h-4 bg-teal-500 rounded-full mt-1.5 -translate-x-1/2 left-1/2 md:left-1/2 border-4 border-gray-200"></div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:max-w-md card-hover">
+          <h3 class="text-lg font-semibold mb-1 text-teal-700">1963</h3>
+          <p class="text-gray-600">Becomes a founding faculty member of the high-energy physics group at Stony Brook University.</p>
+        </div>
+      </div>
+      <!-- Timeline Item 3 -->
+      <div class="mb-12 md:mb-8 flex md:justify-normal md:w-1/2 timeline-item">
+        <div class="timeline-dot absolute w-4 h-4 bg-teal-500 rounded-full mt-1.5 -translate-x-1/2 left-1/2 md:left-1/2 border-4 border-gray-200"></div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:max-w-md card-hover">
+          <h3 class="text-lg font-semibold mb-1 text-teal-700">Late 1970s - 1980s</h3>
+          <p class="text-gray-600">Leads crucial research with the CUSB collaboration at Cornell, studying the Upsilon meson and properties of the beauty quark.</p>
+        </div>
+      </div>
+      <!-- Timeline Item 4 -->
+      <div class="mb-12 md:mb-8 flex md:justify-end md:w-1/2 md:ml-auto timeline-item md:text-right">
+        <div class="timeline-dot absolute w-4 h-4 bg-teal-500 rounded-full mt-1.5 -translate-x-1/2 left-1/2 md:left-1/2 border-4 border-gray-200"></div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:max-w-md card-hover">
+          <h3 class="text-lg font-semibold mb-1 text-teal-700">1984 & 1990s</h3>
+          <p class="text-gray-600">Elected Fellow of the American Physical Society (APS). Contributes to the DZero experiment at Fermilab (Top Quark discovery).</p>
+        </div>
+      </div>
+      <!-- Timeline Item 5 -->
+      <div class="flex md:justify-normal md:w-1/2 timeline-item">
+        <div class="timeline-dot absolute w-4 h-4 bg-teal-500 rounded-full mt-1.5 -translate-x-1/2 left-1/2 md:left-1/2 border-4 border-gray-200"></div>
+        <div class="bg-white p-6 rounded-lg shadow-md w-full md:max-w-md card-hover">
+          <h3 class="text-lg font-semibold mb-1 text-teal-700">1990s - 2014</h3>
+          <p class="text-gray-600">Co-founds KLOE collaboration at Frascati, Italy, studying CP violation in kaons. Becomes Director of Research at LNF (INFN). Passes away in 2014.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Science Section -->
+<section id="science" class="py-16 md:py-24 bg-gray-800 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="section-heading text-white">Decoding the Universe</h2>
+    <p class="text-center text-lg text-gray-300 max-w-3xl mx-auto mb-12">
+      Dr. Lee-Franzini's experimental work spanned decades and continents, probing the fundamental nature of matter and forces.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+      <!-- Science Card 1: Muons & Weak Force -->
+      <div class="bg-gray-700 p-8 rounded-lg shadow-lg card-hover flex flex-col">
+        <div class="mb-4 h-32 bg-gray-600 rounded flex items-center justify-center text-gray-400 overflow-hidden"><img src="images/muon-decay.gif" alt="Muon decay"></div>
+        <h3 class="text-2xl font-bold mb-3 text-teal-300">Muons & the Weak Force</h3>
+        <p class="text-gray-300 mb-4 flex-grow">Early work, including her PhD thesis, involved precise measurements of muons, setting limits on rare decays and providing insights into the weak nuclear force, one of the four fundamental forces.</p>
+        <p class="font-semibold text-teal-400">Key Discovery: Strict limits on μ → e + γ decay.</p>
+      </div>
+      <!-- Science Card 2: Upsilon & Beauty Quarks -->
+      <div class="bg-gray-700 p-8 rounded-lg shadow-lg card-hover flex flex-col">
+        <h3 class="text-2xl font-bold mb-3 text-teal-300">The Secrets of the Beauty Quark</h3>
+        <p class="text-gray-300 mb-4 flex-grow">Led pioneering studies of the Upsilon (ϒ) meson family at Cornell (CUSB experiment). This provided crucial data on the 'beauty' quark, refining the Standard Model of particle physics.</p>
+        <p class="font-semibold text-teal-400">Key Discovery: Detailed properties and states of the Upsilon meson system.</p>
+      </div>
+      <!-- Science Card 3: Top Quark -->
+      <div class="bg-gray-700 p-8 rounded-lg shadow-lg card-hover flex flex-col">
+        <div class="mb-4 h-32 bg-gray-600 rounded flex items-center justify-center text-gray-400"><img src="images/dzero1.gif" width="350"/></div>
+        <h3 class="text-2xl font-bold mb-3 text-teal-300">Hunting the Top Quark</h3>
+        <p class="text-gray-300 mb-4 flex-grow">Contributed significantly to the DZero experiment at Fermilab, one of the two experiments credited with the discovery of the elusive top quark, the most massive fundamental particle known.</p>
+        <p class="font-semibold text-teal-400">Key Discovery: Co-discovery of the Top Quark.</p>
+      </div>
+      <!-- Science Card 4: CP Violation & Kaons -->
+      <div class="bg-gray-700 p-8 rounded-lg shadow-lg card-hover flex flex-col">
+        <div class="mb-4 h-32 bg-gray-600 rounded flex items-center justify-center text-gray-400"><img src="images/kloe.jpeg" width="275"/></div>
+        <h3 class="text-2xl font-bold mb-3 text-teal-300">Matter vs. Antimatter Puzzle</h3>
+        <p class="text-gray-300 mb-4 flex-grow">Co-founded the KLOE experiment in Frascati, Italy, focusing on CP violation – the subtle difference between matter and antimatter – by studying neutral kaons. This is key to understanding the universe's matter dominance.</p>
+        <p class="font-semibold text-teal-400">Key Discovery: High-precision measurements of CP violation parameters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stony Brook & Connections Section -->
+<section id="stonybrook" class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="section-heading text-gray-800">Stony Brook & Global Collaborations</h2>
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+      <!-- Stony Brook Info -->
+      <div class="w-full lg:w-1/2">
+        <div class="mb-6 h-20 w-auto rounded flex items-center justify-center text-gray-500">
+           <img src="images/stonybrook.png" alt="Stony Brook University Logo" class="h-20 object-contain">
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-gray-700">A Founding Force at Stony Brook</h3>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+          Dr. Lee-Franzini was instrumental in establishing Stony Brook University's reputation in high-energy physics. Joining in 1963 as a founding faculty member of the experimental group, she rose to Professor in 1974, mentoring students and contributing significantly to the department's research excellence for decades.
+        </p>
+        <h3 class="text-2xl font-bold mt-8 mb-4 text-gray-700">Hubs of Discovery</h3>
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+          Her research was inherently collaborative, involving partnerships and experiments at leading international laboratories:
+        </p>
+        <div class="flex flex-wrap gap-4 items-center">
+          <div class="p-2 h-16 w-24 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">[Logo: Nevis]</div>
+          <div class="p-2 h-16 w-24 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">[Logo: BNL]</div>
+          <div class="p-2 h-16 w-24 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">[Logo: Fermilab]</div>
+          <div class="p-2 h-16 w-24 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">[Logo: Cornell/CESR]</div>
+          <div class="p-2 h-16 w-24 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">[Logo: Frascati/INFN]</div>
+        </div>
+      </div>
+
+      <!-- Connections Info -->
+      <div class="w-full lg:w-1/2 bg-teal-50 p-8 rounded-lg border border-teal-200 mt-6 lg:mt-0">
+        <h3 class="text-2xl font-bold mb-4 text-teal-800">Contemporaries in Discovery: Physics Meets Computer Science</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          During her impactful tenure at Stony Brook, Dr. Lee-Franzini worked alongside other leading academics, including Professor <strong class="font-medium">Aria Kaufman</strong>, a prominent figure and leader within the Computer Science Department.
+        </p>
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          While their primary research areas differed—particle physics and computer science/visualization—the university fostered an environment of interdisciplinary support. The sophisticated data analysis, simulation, and visualization techniques developed within Computer Science, potentially influenced or supported by Prof. Kaufman's group, were increasingly vital for processing the massive datasets generated by the complex particle physics experiments Dr. Lee-Franzini helped lead. This synergy highlights the collaborative nature of modern scientific breakthroughs.
+        </p>
+        <div class="mt-6 h-80 bg-gray-300 rounded flex items-center justify-center text-gray-500 overflow-hidden">
+          <img src="images/stonybrookcampus.jpg" class="object-contain">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Legacy & Impact Section -->
+<section id="legacy" class="py-16 md:py-24 bg-gray-200">
+  <div class="container mx-auto px-6">
+    <h2 class="section-heading text-gray-800">Illuminating the Path Forward</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <!-- Column 1: Scientific Legacy -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3 text-teal-700">Scientific Legacy</h3>
+        <ul class="list-disc list-inside md:list-outside space-y-2 text-gray-600 text-left">
+          <li>Provided key data solidifying the Standard Model.</li>
+          <li>Advanced understanding of heavy quarks (beauty, top).</li>
+          <li>Pioneered techniques in meson spectroscopy.</li>
+          <li>Contributed significantly to CP violation studies.</li>
+          <li>Inspired generations through experimental excellence.</li>
+        </ul>
+      </div>
+      <!-- Column 2: Awards & Recognition -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3 text-teal-700">Awards & Recognition</h3>
+        <ul class="list-disc list-inside md:list-outside space-y-2 text-gray-600 text-left">
+          <li>Fellow, American Physical Society (APS) (1984)</li>
+          <li>Director of Research, INFN Frascati (1996)</li>
+          <li>Featured in "Out of the Shadows: Contributions of Twentieth-Century Women to Physics"</li>
+          <li>Director, Research Foundation of SUNY</li>
+          <li>Served on numerous APS committees</li>
+        </ul>
+      </div>
+      <!-- Column 3: Why She Matters -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3 text-teal-700">Why Her Story Matters</h3>
+        <p class="text-gray-600 mb-4 text-left">
+          Despite profound contributions, Dr. Lee-Franzini isn't a household name, partly due to the specialized nature of particle physics and historical biases affecting the visibility of women scientists.
+        </p>
+        <p class="text-gray-600 text-left">
+          Her story is vital: it showcases the dedication required for fundamental discovery, highlights the importance of diverse voices in science, and provides a powerful role model for aspiring physicists everywhere. Understanding her work illuminates the process of modern science itself.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bibliography Section -->
+<section id="bibliography" class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="section-heading text-gray-800">Bibliography & Resources</h2>
+    <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg border border-gray-200 text-sm text-gray-700">
+      <p class="mb-6 text-base">Sources used in the creation of this profile (Formatted in APA Style):</p>
+      <ul class="space-y-4">
+        <li>
+          Cundy, D., Kloe Study Group, & Franzini, P. (2014). Juliet Lee-Franzini 1933–2014. *CERN Courier*, *54*(3), 41. [Insert URL if found]
+        </li>
+        <li>
+          Franzini, P., & Menzione, A. (2014). Juliet Lee-Franzini. *Physics Today*, *67*(6), 60. https://doi.org/10.1063/PT.3.2430
+        </li>
+        <li>
+          Lee-Franzini, J. (1960). *Search for the decay mu --> e + gamma* (Nevis-84; CU-187; R-237; AFOSR-TN-60-499). Columbia University, Physics Department. [Insert URL if found]
+        </li>
+        <li>
+          [Placeholder for Stony Brook University Obituary/Memorial Page - Add citation when found]
+        </li>
+        <li>
+          [Placeholder for APS 'Woman Physicist of the Month' article - Add citation when found]
+        </li>
+        <li>
+          [Placeholder for 'Out of the Shadows' book citation if specific chapter is used - Add citation when found]
+        </li>
+        <li>
+          [Add any other sources used here in APA format]
+        </li>
+      </ul>
+      <p class="mt-6 text-base">Further exploration resources could be linked here.</p>
+      <!-- Optional: Download button for bibliography -->
+      <!-- <a href="#" class="inline-block mt-6 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded transition duration-300 text-sm">Download Bibliography (PDF)</a> -->
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-8">
+  <div class="container mx-auto px-6 text-center">
+    <p>© Jason Cameron 2025. All Rights Reserved.</p>
+    <p class="text-sm mt-2">Website created for SCH4U1.</p>
+  </div>
+</footer>
+
+<!-- Optional: Back to Top Button (requires JS for smooth scroll or use CSS scroll-smooth) -->
+<a href="#hero" class="fixed bottom-5 right-5 bg-teal-500 hover:bg-teal-600 text-white p-3 rounded-full shadow-lg transition duration-300 z-40" aria-label="Back to top">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+</a>
+
+</body>
+</html>
